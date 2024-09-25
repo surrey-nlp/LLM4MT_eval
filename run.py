@@ -6,6 +6,7 @@ model_type = "llama/"
 template = "04"
 model_name = "meta-llama/Llama-2-13b-chat-hf"
 lang_pair = "en-de"
+quantization = None
 
 
 def main(max_model_len=1024, gpu_memory_util=0.9, quantization=None, temperature=0.8, top_p=0.95):
@@ -28,4 +29,4 @@ def main(max_model_len=1024, gpu_memory_util=0.9, quantization=None, temperature
     print("Done!")
 
 if __name__ == "__main__":
-    main(quantization=None)
+    main(quantization=quantization)
