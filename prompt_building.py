@@ -15,6 +15,7 @@ mixtral_format = "<s>[INST]{user_input}[/INST]"
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate prompts for vLLM evaluation")
     parser.add_argument("--prompt_format", type=str, default=llama_format, help="The format of the prompt for different LLMs")
+    parser.add_argument("--main_file", type=str, default=None, help="The main file (path) containing source, reference, machine translation and DA scores")
     args = parser.parse_args()
     return args
 
@@ -284,8 +285,12 @@ def main():
     languauge_pairs = ["en-de", "en-mr", "en-zh", "et-en", "ne-en", "ro-en", "ru-en", "si-en"]
 
     for lang_pair in languauge_pairs:
-        main_file = "split_data/" + lang_pair + "_overlaps_test.tsv"
+        if args.main_file:
+            main_file = args.main_file
+        else:
+            main_file = "raw_data/" + lang_pair + "_overlaps_test.tsv"
         previous_output_file = None
+        
         template = VllmTemplate(main_file, error_file=None, previous_output_file=previous_output_file, format=args.prompt_format)
         template.generate_template01()
         template.generate_template02()
