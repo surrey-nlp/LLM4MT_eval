@@ -21,10 +21,10 @@ python run.py
 Check and change the model_type, template, model_name, lang_pair, and quantization varibles in run.py, to select different templates, models and language pairs.
 
 ```
-#select model type under the folder prompts
+# select model type under the folder prompts
 model_type = "llama/"
 template = "04"
-#model name from HuggingFace
+# model name from HuggingFace
 model_name = "meta-llama/Llama-2-13b-chat-hf"
 lang_pair = "en-de"
 # 'awq' for Mixtral and None for the rest in our paper
@@ -40,16 +40,16 @@ python output_parser.py
 Check and change the template_version and subfolder variables in output_parser.py, to get the right path to your saved LLM output files.
 
 ```
-#template + model name
+# template + model name
 template_version = "03-mixtual"
-#folder name where outputs stored
+# folder name where outputs stored
 subfolder = "./llm_output_samples/"
 ```
 
 ## Build prompts with other data and format
 
 ```
-python prompt_building --prompt_format gemma_format --main_file raw_data/en-de/en-de_overlaps_dev.tsv
+python prompt_building.py --prompt_format gemma_format --main_file raw_data/en-de/en-de_overlaps_dev.tsv
 ```
 
 You can also add or change the format for different LLMs in prompt_building.py.
