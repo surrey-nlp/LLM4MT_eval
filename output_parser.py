@@ -94,7 +94,7 @@ if __name__ == "__main__":
         print("%s:" % language_pair)
         data = pd.read_csv(subfolder + language_pair.upper() + "_outputs_t" + template_version + ".tsv", sep='\t', encoding='utf-8', on_bad_lines='skip')
         num, dropped_index = extract_number(data, key="vllm_output", position=0)
-        label = list(map(round, read_tsv("./split_data/" + language_pair + "_overlaps_dev.tsv")["score"].tolist()))
+        label = list(map(round, read_tsv("./raw_data/" + language_pair + "_overlaps_test.tsv")["score"].tolist()))
 
         corrs = compute_correlation_score(num, label, dropped_index)
         print("Dropped rows: ", len(dropped_index))
