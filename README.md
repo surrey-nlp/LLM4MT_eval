@@ -46,7 +46,7 @@ template_version = "03-mixtual"
 subfolder = "./llm_output_samples/"
 ```
 
-## Build prompts with other data and format
+## Build prompts with other data and formats
 
 ```
 python prompt_building.py --prompt_format gemma_format --main_file raw_data/en-de/en-de_overlaps_dev.tsv
