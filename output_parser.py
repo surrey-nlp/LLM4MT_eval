@@ -83,7 +83,7 @@ def compute_correlation_score(num, label, dropped_index=None):
 
 if __name__ == "__main__":
     
-    template_version = "03-mixtual"
+    template_version = "03-mixtral"
     subfolder = "./llm_output_samples/"
 
     language_pairs = ["en-de", "en-mr", "en-zh", "et-en", "ne-en", "ro-en", "ru-en", "si-en"]
@@ -94,7 +94,7 @@ if __name__ == "__main__":
         print("%s:" % language_pair)
         data = pd.read_csv(subfolder + language_pair.upper() + "_outputs_t" + template_version + ".tsv", sep='\t', encoding='utf-8', on_bad_lines='skip')
         num, dropped_index = extract_number(data, key="vllm_output", position=0)
-        label = list(map(round, read_tsv("./raw_data/" + language_pair + "_overlaps_test.tsv")["score"].tolist()))
+        label = list(map(round, read_tsv("./raw_data/" + language_pair + "/" + language_pair + "_overlaps_test.tsv")["score"].tolist()))
 
         corrs = compute_correlation_score(num, label, dropped_index)
         print("Dropped rows: ", len(dropped_index))
