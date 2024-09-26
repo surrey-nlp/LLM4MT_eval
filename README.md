@@ -18,7 +18,7 @@ pip install -r requirements.txt
 python run.py
 ```
 
-Check and change the model_type, template, model_name, lang_pair, and quantization varibles in run.py, to select different templates, models and language pairs.
+Check and change the model_type, template, model_name, lang_pair, and quantization variables in run.py, to select different templates, models and language pairs.
 
 ```
 # select model type under the folder prompts
