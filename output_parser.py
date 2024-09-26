@@ -52,7 +52,7 @@ def extract_number(data, key="predict", position=0):
                 extract_num_from_str(pattern, pred, idx, position, result, index)
 
         else: # if the data is a pandas dataframe
-            for idx, item in data[key].iteritems():
+            for idx, item in data[key].items():
                 pred = item
                 extract_num_from_str(pattern, pred, idx, position, result, index)
     else: # if the data is a list of strings
