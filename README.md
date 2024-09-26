@@ -41,7 +41,7 @@ Check and change the template_version and subfolder variables in output_parser.p
 
 ```
 # template + model name
-template_version = "03-mixtual"
+template_version = "03-mixtral"
 # folder name where outputs stored
 subfolder = "./llm_output_samples/"
 ```
