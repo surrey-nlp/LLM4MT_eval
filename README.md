@@ -22,10 +22,10 @@ Check and change the model_type, template, model_name, lang_pair, and quantizati
 
 ```
 # select model type under the folder prompts
-model_type = "llama/"
+model_type = "./prompts/llama/"
 template = "04"
 # model name from HuggingFace
-model_name = "meta-llama/Llama-2-13b-chat-hf"
+model_name = "meta-llama/Llama-2-7b-chat-hf"
 lang_pair = "en-de"
 # 'awq' for Mixtral and None for the rest in our paper
 quantization = None
