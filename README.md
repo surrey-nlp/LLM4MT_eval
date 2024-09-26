@@ -1,6 +1,6 @@
 # What do large language models need for machine translaiton evaluation?
 
-This repository contains the code and data for our paper "What do large language models need for machine translation evaluation?", which will be presented at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP2024). The paper investigates the effectiveness of large language models (LLMs) in machine translation evaluation through prompt engineering. It explores various prompting strategies and the types of information provided to LLMs across different language pairs and model architectures. For more details, please find our paper at arXiv. 
+This repository contains the code and data for our paper "What do large language models need for machine translation evaluation?", which will be presented at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP2024). The paper investigates the effectiveness of large language models (LLMs) in machine translation evaluation without training. It explores various prompting strategies and the types of information provided to LLMs across different language pairs and model architectures. For more details, please find our paper at arXiv. 
 
 ## Installation
 
