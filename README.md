@@ -54,6 +54,10 @@ python prompt_building.py --prompt_format gemma_format --main_file raw_data/en-d
 
 You can also add or change the format for different LLMs in prompt_building.py.
 
+## Reference(s)
+
+Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph Gonzalez, Hao Zhang, and Ion Stoica. 2023. Efficient Memory Management for Large Language Model Serving with PagedAttention. In *Proceedings of the 29th Symposium on Operating Systems Principles (SOSP '23)*. Association for Computing Machinery, New York, NY, USA, 611–626. https://doi.org/10.1145/3600006.3613165
+
 ## Maintainer(s)
 
 [Shenbin Qian](https://github.com/shenbinqian) \
